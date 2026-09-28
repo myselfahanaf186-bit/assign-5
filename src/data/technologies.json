@@ -1,0 +1,33 @@
+[
+  {
+    "id": "react",
+    "name": "React",
+    "category": "Frontend",
+    "description": "A JavaScript library for building modern user interfaces.",
+    "icon": "https://icon.icepanel.io/Technology/svg/React.svg",
+    "rating": 4.9,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Popular"
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "category": "Language",
+    "description": "A typed programming language that builds on JavaScript.",
+    "icon": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+    "rating": 4.8,
+    "difficulty": "Intermediate",
+    "badge": "Essential"
+  },
+  {
+  "id": "tailwind",
+  "name": "Tailwind CSS",
+  "category": "Styling",
+  "description": "A utility-first CSS framework for building custom designs.",
+  "icon": "https://cdn.simpleicons.org/tailwindcss",
+  "rating": 4.8,
+  "difficulty": "Beginner-Friendly",
+  "badge": "Popular"
+}
+
+]

@@ -1,32 +1,41 @@
-# React + TypeScript + Vite
+## React Questions
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+### 1. What is React?
 
-Currently, two official plugins are available:
+React is a JavaScript library used to build user interfaces,
+especially for web applications. It allows developers to create
+reusable UI components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 2. What is a component in React?
 
-## React Compiler
+A component is a reusable piece of UI. For example, in this project
+Navbar, Hero, TechnologyCard, YourStack, and Footer are separate
+components.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 3. What is the difference between props and state?
 
-## Expanding the Oxlint configuration
+Props are data passed from a parent component to a child component.
+State is data managed inside a component that can change over time.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+### 4. What is useState in React?
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+useState is a React Hook used to create and manage state inside a
+functional component. In this project, it is used to store the
+selected technologies in the user's stack.
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### 5. What is useEffect used for?
+
+useEffect is used to perform side effects in a React component.
+In this project, it is used to fetch technology data from
+technologies.json when the application loads.
+
+### 6. What is the purpose of the key prop when rendering lists?
+
+The key prop helps React identify individual elements in a list.
+It allows React to efficiently update the UI when list items change.
+
+### 7. Why do we use TypeScript with React?
+
+TypeScript adds static type checking to JavaScript. It helps catch
+type-related errors during development and makes React code easier
+to understand and maintain.
