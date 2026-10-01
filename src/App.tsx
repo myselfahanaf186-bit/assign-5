@@ -14,7 +14,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [stack, setStack] = useState<Technology[]>([]);
 
-  // Add technology to stack
+ 
   const addToStack = (technology: Technology) => {
     const alreadyAdded = stack.some(
       (item) => item.id === technology.id
@@ -34,7 +34,7 @@ function App() {
     );
   };
 
-  // Remove one technology
+
   const removeFromStack = (id: string) => {
     const technology = stack.find(
       (item) => item.id === id
@@ -78,14 +78,16 @@ function App() {
       });
   }, []);
 
-  // Loading
-  if (loading) {
-    return (
-      <p className="text-center mt-20">
-        Loading...
+ if (loading) {
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <p className="text-lg font-semibold text-gray-600">
+        Loading technologies...
       </p>
-    );
-  }
+    </div>
+  );
+}
+
 
   return (
     <>
