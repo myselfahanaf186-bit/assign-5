@@ -14,7 +14,7 @@ const YourStack = ({
   return (
     <div className="border border-gray-200 rounded-2xl bg-white p-6 shadow-sm sticky top-24">
 
-      {/* Header */}
+      {}
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-xl font-bold text-gray-900">
@@ -26,7 +26,7 @@ const YourStack = ({
           </p>
         </div>
 
-        {/* Remove All */}
+        {}
         {stack.length > 0 && (
           <button
             onClick={onRemoveAll}
@@ -37,7 +37,7 @@ const YourStack = ({
         )}
       </div>
 
-      {/* Empty State */}
+      {}
       {stack.length === 0 ? (
         <div className="py-10 text-center">
 
@@ -46,7 +46,7 @@ const YourStack = ({
           </div>
 
           <h3 className="font-semibold text-gray-700">
-            No technologies selected
+            No technologies selected yet.
           </h3>
 
           <p className="text-sm text-gray-400 mt-2 leading-6">
@@ -58,7 +58,7 @@ const YourStack = ({
         </div>
       ) : (
 
-        /* Selected Technologies */
+       
         <div className="mt-6 space-y-3">
 
           {stack.map((technology) => (
@@ -67,7 +67,7 @@ const YourStack = ({
               className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 border border-gray-100"
             >
 
-              {/* Icon */}
+              {}
               <div className="w-9 h-9 rounded-lg bg-white flex items-center justify-center">
                 <img
                   src={technology.icon}
@@ -76,7 +76,7 @@ const YourStack = ({
                 />
               </div>
 
-              {/* Name */}
+              {}
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium text-gray-800 truncate">
                   {technology.name}
@@ -87,7 +87,7 @@ const YourStack = ({
                 </p>
               </div>
 
-              {/* Remove */}
+              {}
               <button
                 onClick={() => onRemove(technology.id)}
                 className="text-xs text-red-500 hover:text-red-600"
