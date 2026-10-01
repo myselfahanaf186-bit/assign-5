@@ -65,7 +65,7 @@ Example:
 )}
 ## 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
 
-A parent component can pass data to a child component using props.
+parent component can pass data to a child component using props.
 
 In this project, `App.tsx` passes the `technology` data and the `onAddToStack` function to the `TechnologyCard` component.
 
@@ -75,4 +75,4 @@ Example:
 <TechnologyCard
   technology={technology}
   onAddToStack={addToStack}
-/>
+/> 
