@@ -51,7 +51,7 @@ function App() {
     }
   };
 
-  // Remove all technologies
+
   const removeAllFromStack = () => {
     setStack([]);
 
@@ -60,7 +60,7 @@ function App() {
     );
   };
 
-  // Load technologies from JSON
+
   useEffect(() => {
     fetch("/data/technologies.json")
       .then((response) => response.json())
@@ -89,17 +89,17 @@ function App() {
 
   return (
     <>
-      {/* Navbar */}
+      {}
       <Navbar />
 
-      {/* Hero */}
+      {}
       <Hero />
 
-      {/* Technology Section */}
-      <section className="py-16">
+      {}
+    <section id="technologies" className="py-16">
         <div className="max-w-6xl mx-auto px-6">
 
-          {/* Section Heading */}
+          {}
           <h2 className="text-3xl font-bold text-gray-900">
             Explore the Technologies
           </h2>
@@ -108,10 +108,10 @@ function App() {
             Choose the technologies you want to add to your stack.
           </p>
 
-          {/* Technology Cards + Your Stack */}
+          {}
           <div className="grid lg:grid-cols-3 gap-8 mt-10">
 
-            {/* Technology Cards */}
+            {}
             <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6">
 
               {technologies.map((technology) => (
@@ -127,7 +127,7 @@ function App() {
 
             </div>
 
-            {/* Your Stack */}
+            {}
             <div className="lg:col-span-1">
 
               <YourStack
@@ -142,10 +142,10 @@ function App() {
         </div>
       </section>
 
-      {/* Footer */}
+      {}
       <Footer />
 
-      {/* Toast Notifications */}
+      {}
       <ToastContainer position="top-right" />
     </>
   );

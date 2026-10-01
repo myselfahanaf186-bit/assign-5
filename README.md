@@ -1,41 +1,78 @@
-## React Questions
 
-### 1. What is React?
 
-React is a JavaScript library used to build user interfaces,
-especially for web applications. It allows developers to create
-reusable UI components.
+## 1. What is JSX, and why is it used in React?
 
-### 2. What is a component in React?
+JSX is a syntax that allows us to write HTML-like code inside JavaScript or TypeScript. It is used in React to create and describe the user interface easily.
 
-A component is a reusable piece of UI. For example, in this project
-Navbar, Hero, TechnologyCard, YourStack, and Footer are separate
-components.
+## 2. What is the difference between props and state?
 
-### 3. What is the difference between props and state?
+Props are data passed from a parent component to a child component. State is data managed inside a component that can change over time.
 
-Props are data passed from a parent component to a child component.
-State is data managed inside a component that can change over time.
+## 3. What does the `useState` hook do, and where did you use it in this project?
 
-### 4. What is useState in React?
+`useState` is a React Hook used to create and manage state in a component.
 
-useState is a React Hook used to create and manage state inside a
-functional component. In this project, it is used to store the
-selected technologies in the user's stack.
+In this project, I used it to store the technologies, loading status, and selected technologies in the stack.
 
-### 5. What is useEffect used for?
+Example:
 
-useEffect is used to perform side effects in a React component.
-In this project, it is used to fetch technology data from
-technologies.json when the application loads.
+```tsx
+const [stack, setStack] = useState<Technology[]>([]);
+## 4. What does the `useEffect` hook do, and why did you need it to load the JSON data?
 
-### 6. What is the purpose of the key prop when rendering lists?
+`useEffect` is a React Hook used to perform side effects in a component.
 
-The key prop helps React identify individual elements in a list.
-It allows React to efficiently update the UI when list items change.
+I used it to fetch the technology data from `technologies.json` when the application loads.
 
-### 7. Why do we use TypeScript with React?
+Example:
 
-TypeScript adds static type checking to JavaScript. It helps catch
-type-related errors during development and makes React code easier
-to understand and maintain.
+```tsx
+useEffect(() => {
+  fetch("/data/technologies.json")
+    .then((response) => response.json())
+    .then((data) => {
+      setTechnologies(data);
+    });
+}, []);
+## 5. Why does every item in a `.map()` list need a unique `key` prop?
+
+A unique `key` helps React identify each item in a list. It allows React to efficiently update, add, or remove items when the list changes.
+
+In this project, `technology.id` is used as the unique key.
+
+Example:
+
+```tsx
+{technologies.map((technology) => (
+  <TechnologyCard
+    key={technology.id}
+    technology={technology}
+  />
+))}
+## 6. What is conditional rendering? Show one place you used it (example: the empty stack message).
+
+Conditional rendering means showing different content based on a condition.
+
+I used conditional rendering in the `YourStack` component. When the stack is empty, it shows a message saying that no technologies have been selected.
+
+Example:
+
+```tsx
+{stack.length === 0 ? (
+  <p>No technologies selected</p>
+) : (
+  // Selected technologies
+)}
+## 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+
+A parent component can pass data to a child component using props.
+
+In this project, `App.tsx` passes the `technology` data and the `onAddToStack` function to the `TechnologyCard` component.
+
+Example:
+
+```tsx
+<TechnologyCard
+  technology={technology}
+  onAddToStack={addToStack}
+/>
